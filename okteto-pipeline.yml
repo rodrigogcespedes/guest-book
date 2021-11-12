@@ -6,6 +6,6 @@ deploy:
   - kubectl apply -f redis-follower-service.yaml
   - kubectl apply -f frontend-deployment.yaml
   - kubectl apply -f frontend-service.yaml
-  - kubectl port-forward service/frontend 8080:80
+#  - kubectl port-forward service/frontend 8080:80
 devs:
   - okteto.yml
