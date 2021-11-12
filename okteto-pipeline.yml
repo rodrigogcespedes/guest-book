@@ -1,0 +1,10 @@
+icon: https://apps.okteto.com/movies/icon.png
+deploy:
+  - kubectl apply -f redis-leader-deployment.yaml
+  - kubectl apply -f redis-leader-service.yaml
+  - kubectl apply -f redis-follower-deployment.yaml
+  - kubectl apply -f redis-follower-service.yaml
+  - kubectl apply -f frontend-deployment.yaml
+  - kubectl apply -f frontend-service.yaml
+devs:
+  - okteto.yml

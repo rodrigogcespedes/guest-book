@@ -1,0 +1,12 @@
+name: guest-book
+autocreate: true
+image: okteto/php:7
+command: bash
+volumes:
+- /root/.composer/cache
+sync:
+- .:/usr/src/app
+forward:
+- 8080:8080
+reverse:
+- 9000:9000
